@@ -51,5 +51,17 @@ impl Player{
             self.color,
         );
     }
-    
+
+    pub fn current_pos(&self) -> Vec2{
+        Vec2::new(self.x,self.y)
+    }
+    pub fn draw_cod(&self){
+        draw_text(
+            &format!("X: {} ,Y: {}",self.x,self.y),
+            5.0,
+            20.0,
+            20.0,
+            BLACK,
+        );
+    }
 }
